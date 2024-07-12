@@ -1,0 +1,277 @@
+[
+    {
+      "id": 1,
+      "topic": "Education",
+      "words": [
+        "learning", "curriculum", "student", "teacher", "university",
+        "assessment", "scholarship", "knowledge", "classroom", "lecture",
+        "homework", "examination", "tutoring", "enrollment", "degree",
+        "research", "education system", "literacy", "extracurricular", "training",
+        "academic", "faculty", "pedagogy", "skills", "qualification"
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Environment",
+      "words": [
+        "sustainability", "pollution", "climate", "ecosystem", "conservation",
+        "biodiversity", "habitat", "recycling", "renewable", "deforestation",
+        "wildlife", "greenhouse", "emissions", "global warming", "resources",
+        "environmental impact", "natural disaster", "contamination", "fossil fuels", "energy",
+        "climate change", "ocean", "landfill", "carbon footprint", "natural resources"
+      ]
+    },
+    {
+      "id": 3,
+      "topic": "Technology",
+      "words": [
+        "innovation", "internet", "artificial intelligence", "smartphone", "software",
+        "hardware", "automation", "cybersecurity", "data", "digital",
+        "social media", "cloud computing", "robotics", "programming", "gadget",
+        "technological advancement", "virtual reality", "app", "network", "communication",
+        "blockchain", "e-commerce", "machine learning", "user interface", "data analysis"
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Health",
+      "words": [
+        "nutrition", "wellness", "exercise", "diet", "fitness",
+        "medicine", "disease", "healthcare", "mental health", "hygiene",
+        "vaccination", "prevention", "symptoms", "treatment", "diagnosis",
+        "hospital", "doctor", "pharmacy", "therapy", "lifestyle",
+        "nutritionist", "health insurance", "chronic", "well-being", "rehabilitation"
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Work and Employment",
+      "words": [
+        "job", "career", "salary", "resume", "interview",
+        "employer", "employee", "workplace", "promotion", "benefits",
+        "unemployment", "contract", "training", "skills", "leadership",
+        "work-life balance", "industry", "profession", "networking", "productivity",
+        "performance", "colleagues", "employment", "internship", "freelance"
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "Travel and Tourism",
+      "words": [
+        "destination", "adventure", "vacation", "itinerary", "tourist",
+        "accommodation", "sightseeing", "exploration", "transportation", "culture",
+        "guide", "passport", "travel agency", "experience", "landmark",
+        "holiday", "wanderlust", "backpacking", "travelogue", "attraction",
+        "souvenir", "trip", "staycation", "expedition", "local cuisine"
+      ]
+    },
+    {
+      "id": 7,
+      "topic": "Food and Nutrition",
+      "words": [
+        "cuisine", "diet", "healthy", "meal", "ingredients",
+        "nutrition", "recipe", "cooking", "snack", "beverage",
+        "fast food", "organic", "vegetarian", "vegan", "calories",
+        "protein", "carbohydrate", "sugar", "fiber", "appetite",
+        "gourmet", "sustainable", "food waste", "restaurant", "dining"
+      ]
+    },
+    {
+      "id": 8,
+      "topic": "Media and Advertising",
+      "words": [
+        "advertisement", "marketing", "promotion", "campaign", "branding",
+        "journalism", "news", "broadcasting", "digital media", "public relations",
+        "social media", "content", "target audience", "influencer", "creativity",
+        "sponsorship", "strategy", "consumer", "advertorial", "infographic",
+        "trending", "viral", "headline", "editorial", "communication"
+      ]
+    },
+    {
+      "id": 9,
+      "topic": "Culture and Traditions",
+      "words": [
+        "heritage", "customs", "tradition", "festival", "celebration",
+        "art", "music", "dance", "religion", "ethnicity",
+        "values", "beliefs", "cultural diversity", "folklore", "community",
+        "identity", "cuisine", "rituals", "symbols", "language",
+        "historical", "craftsmanship", "local", "tolerance", "intercultural"
+      ]
+    },
+    {
+      "id": 10,
+      "topic": "Sports and Recreation",
+      "words": [
+        "athlete", "competition", "fitness", "training", "team",
+        "exercise", "coach", "tournament", "sportsmanship", "leisure",
+        "recreation", "gym", "performance", "hobby", "goal",
+        "equipment", "strategy", "score", "championship", "fan",
+        "outdoor", "indoor", "activity", "endurance", "well-being"
+      ]
+    },
+    {
+      "id": 11,
+      "topic": "Family and Relationships",
+      "words": [
+        "family", "parenting", "communication", "relationship", "marriage",
+        "friendship", "support", "bonding", "trust", "conflict",
+        "love", "companionship", "separation", "divorce", "respect",
+        "kinship", "unity", "tradition", "dynamics", "responsibility",
+        "community", "values", "connection", "companionship", "interaction"
+      ]
+    },
+    {
+      "id": 12,
+      "topic": "Housing and Living Conditions",
+      "words": [
+        "accommodation", "rent", "mortgage", "neighborhood", "community",
+        "property", "housing", "utility", "apartment", "household",
+        "real estate", "space", "environment", "comfort", "security",
+        "affordability", "renovation", "landlord", "tenant", "location",
+        "amenities", "maintenance", "urban", "suburban", "rural"
+      ]
+    },
+    {
+      "id": 13,
+      "topic": "Crime and Punishment",
+      "words": [
+        "crime", "justice", "law", "offender", "punishment",
+        "rehabilitation", "penalty", "deterrent", "violence", "theft",
+        "legal system", "crime rate", "criminal", "society", "victim",
+        "prosecution", "trial", "sentence", "misdemeanor", "felony",
+        "law enforcement", "detective", "court", "appeal", "witness"
+      ]
+    },
+    {
+      "id": 14,
+      "topic": "Urbanization and City Life",
+      "words": [
+        "urbanization", "city", "suburb", "infrastructure", "population",
+        "public transport", "housing", "development", "commute", "traffic",
+        "pollution", "skyscraper", "services", "community", "lifestyle",
+        "amenities", "diversity", "zoning", "economy", "sustainability",
+        "renewal", "congestion", "planning", "growth", "local culture"
+      ]
+    },
+    {
+      "id": 15,
+      "topic": "Nature and Wildlife",
+      "words": [
+        "wildlife", "species", "habitat", "conservation", "biodiversity",
+        "ecosystem", "endangered", "environment", "nature", "flora",
+        "fauna", "natural resources", "preservation", "sustainability", "climate",
+        "pollution", "ecosystem balance", "natural habitats", "animal rights",
+        "green spaces", "farming", "fishing", "forestry", "land conservation"
+      ]
+    },
+    {
+      "id": 16,
+      "topic": "Shopping and Consumerism",
+      "words": [
+        "shopping", "consumer", "retail", "market", "purchase",
+        "bargain", "brand", "quality", "consumerism", "advertising",
+        "online shopping", "sale", "discount", "store", "service",
+        "product", "loyalty", "spending", "habit", "trend",
+        "experience", "economy", "merchandise", "promotion", "transaction"
+      ]
+    },
+    {
+      "id": 17,
+      "topic": "Globalization",
+      "words": [
+        "globalization", "economy", "culture", "trade", "communication",
+        "technology", "international", "impact", "community", "foreign",
+        "influence", "standardization", "culture shock", "openness", "diversity",
+        "market", "sustainability", "politics", "social change"
+      ]
+    },
+    {
+      "id": 18,
+      "topic": "History and Heritage",
+      "words": [
+        "history", "heritage", "culture", "tradition", "monument",
+        "archaeology", "civilization", "legacy", "ancient", "chronology",
+        "exhibition", "museum", "historical", "preservation", "artifact",
+        "research", "timeline", "event", "revolution", "empire",
+        "legacy", "narrative", "period", "heritage site", "exploration"
+      ]
+    },
+    {
+      "id": 19,
+      "topic": "Public Transport",
+      "words": [
+        "transportation", "bus", "train", "subway", "commute",
+        "traffic", "infrastructure", "congestion", "fare", "timetable",
+        "schedules", "routes", "service", "network", "passenger",
+        "bicycle", "taxi", "ride-sharing", "transport policy", "accessibility",
+        "urban planning", "carpool", "shuttle", "public transit", "environmental impact"
+      ]
+    },
+    {
+      "id": 20,
+      "topic": "Social Issues",
+      "words": [
+        "inequality", "poverty", "discrimination", "justice", "rights",
+        "community", "protest", "advocacy", "awareness", "education",
+        "inclusion", "diversity", "sustainability", "empowerment", "welfare",
+        "activism", "freedom", "social change", "solidarity", "engagement",
+        "policy", "dialogue", "unemployment", "integration", "support"
+      ]
+    },
+    {
+      "id": 21,
+      "topic": "Science and Research",
+      "words": [
+        "research", "scientific", "experiment", "hypothesis", "data",
+        "analysis", "methodology", "theory", "innovation", "technology",
+        "discovery", "researcher", "laboratory", "publication", "study",
+        "peer review", "fieldwork", "application", "evidence", "results",
+        "funding", "ethics", "experiment", "collaboration", "breakthrough"
+      ]
+    },
+    {
+      "id": 22,
+      "topic": "Arts and Literature",
+      "words": [
+        "art", "literature", "creativity", "expression", "poetry",
+        "novel", "painting", "theater", "culture", "gallery",
+        "exhibition", "writer", "storytelling", "performance", "music",
+        "drama", "critique", "style", "aesthetic", "inspiration",
+        "genre", "artistic", "narrative", "composition", "interpretation"
+      ]
+    },
+    {
+      "id": 23,
+      "topic": "Language and Communication",
+      "words": [
+        "language", "communication", "dialogue", "conversation", "expression",
+        "linguistics", "fluency", "translation", "dialect", "vocabulary",
+        "grammar", "pronunciation", "speech", "writing", "reading",
+        "interaction", "culture", "meaning", "context", "nonverbal",
+        "expression", "lingua franca", "communication skills", "literacy", "discourse"
+      ]
+    },
+    {
+      "id": 24,
+      "topic": "Government and Politics",
+      "words": [
+        "government", "politics", "democracy", "policy", "election",
+        "politician", "vote", "legislation", "citizen", "rights",
+        "representation", "administration", "authority", "system", "governance",
+        "activism", "campaign", "referendum", "protest", "political party",
+        "parliament", "bureaucracy", "constitution", "foreign policy", "diplomacy"
+      ]
+    },
+    {
+      "id": 25,
+      "topic": "Youth and Society",
+      "words": [
+        "youth", "generation", "teenager", "education", "opportunity",
+        "social issues", "technology", "culture", "community", "values",
+        "identity", "engagement", "activism", "peer pressure", "responsibility",
+        "development", "aspirations", "future", "challenges", "mentorship",
+        "experience", "leadership", "influence", "participation", "social media"
+      ]
+    }
+  ]
+  
