@@ -67,6 +67,7 @@ const Home = () => {
             <FeatureCard
               title="Translator"
               icon={<FaGlobe className="text-blue-600 w-12 h-12 mb-4" />}
+              badge="Coming Soon"
             >
               <ul>
                 <li>Real-time text translation</li>

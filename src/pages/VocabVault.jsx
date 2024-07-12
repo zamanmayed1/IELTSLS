@@ -10,7 +10,7 @@ const VocabVault = () => {
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const response = await axios.get('/public/VocabVault.json');
+        const response = await axios.get('../../public/VocabVault.json');
         setTopics(response.data);
       } catch (error) {
         console.error('Error fetching topics:', error);
