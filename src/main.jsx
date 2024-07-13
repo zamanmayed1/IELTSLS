@@ -9,6 +9,8 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Home from "./pages/Home.jsx";
 import Library from "./pages/Library.jsx";
 import VocabVault from "./pages/VocabVault.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +33,15 @@ const router = createBrowserRouter([
       {
         path: "/vocabvault",
         element: <VocabVault/>,
-      }
+      },
+      {
+        path: "/login",
+        element: <Login/>,
+      },
+      {
+        path: "/register",
+        element: <Register/>,
+      },
     ],
   },
 ]);

@@ -140,7 +140,7 @@ const Library = () => {
       <Helmet>
         <title>Library - Read More, Learn More</title>
       </Helmet>
-      <div className="container mx-auto p-4">
+      <div className=" mx-auto  py-6 px-2 lg:px-8 ">
         <div className="flex justify-center mb-4">
           <input
             type="text"

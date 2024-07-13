@@ -1,24 +1,37 @@
-import { FaTachometerAlt, FaComments, FaBook, FaRegLightbulb, FaGlobe, FaClipboardList, FaCommentsDollar } from 'react-icons/fa';
+import {
+  FaTachometerAlt,
+  FaComments,
+  FaBook,
+  FaRegLightbulb,
+  FaGlobe,
+  FaClipboardList,
+  FaCommentsDollar,
+} from "react-icons/fa";
 
 const Home = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
-
       <header className="bg-blue-600 text-white py-6">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold">IELTS Learning System (IELTSLS)</h1>
-          <p className="mt-2 text-lg">Your path to IELTS success starts here!</p>
+        <div className=" mx-auto text-center">
+          <h1 className="text-4xl font-bold">
+            IELTS Learning System (IELTSLS)
+          </h1>
+          <p className="mt-2 text-lg">
+            Your path to IELTS success starts here!
+          </p>
         </div>
       </header>
 
       {/* Features */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto">
+      <section className="bg-white py-10 px-2 lg:px-8  mx-auto">
+        <div className=" mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature Card */}
             <FeatureCard
               title="Student Dashboard"
-              icon={<FaTachometerAlt className="text-blue-600 w-12 h-12 mb-4" />}
+              icon={
+                <FaTachometerAlt className="text-blue-600 w-12 h-12 mb-4" />
+              }
             >
               <ul>
                 <li>Overview of progress and recent activities</li>
@@ -79,12 +92,16 @@ const Home = () => {
 
             <FeatureCard
               title="Mock Test System"
-              icon={<FaClipboardList className="text-blue-600 w-12 h-12 mb-4" />}
+              icon={
+                <FaClipboardList className="text-blue-600 w-12 h-12 mb-4" />
+              }
               badge="Coming Soon"
             >
               <ul>
                 <li>Full-length IELTS practice tests</li>
-                <li>Section-wise tests (Listening, Reading, Writing, Speaking)</li>
+                <li>
+                  Section-wise tests (Listening, Reading, Writing, Speaking)
+                </li>
                 <li>Timed and untimed modes</li>
                 <li>Performance analytics and feedback</li>
               </ul>
@@ -92,7 +109,9 @@ const Home = () => {
 
             <FeatureCard
               title="IELTS Speaking Test System"
-              icon={<FaCommentsDollar className="text-blue-600 w-12 h-12 mb-4" />}
+              icon={
+                <FaCommentsDollar className="text-blue-600 w-12 h-12 mb-4" />
+              }
               badge="Coming Soon"
             >
               <ul>
@@ -119,7 +138,9 @@ const FeatureCard = ({ title, icon, children, badge }) => {
           {badge}
         </span>
       )}
-      <ul className="list-disc list-inside text-gray-700 text-left">{children}</ul>
+      <ul className="list-disc list-inside text-gray-700 text-left">
+        {children}
+      </ul>
     </div>
   );
 };

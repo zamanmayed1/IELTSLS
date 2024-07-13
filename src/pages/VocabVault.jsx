@@ -67,11 +67,11 @@ const VocabVault = () => {
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className=" mx-auto py-6 px-2 lg:px-8 ">
       <Helmet>
         <title>Vocab Vault - Unlock Your Word Power!</title>
       </Helmet>
-      <div className="mb-4">
+      <div className="mb-4 ">
         <div className="relative w-full h-2 bg-gray-200 rounded">
           <div
             className="absolute h-full bg-blue-600 rounded"

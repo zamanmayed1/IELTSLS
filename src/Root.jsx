@@ -10,7 +10,7 @@ const Root = () => {
         <title>Home - IELTS LS</title>
       </Helmet>
       <Navbar />
-      <Outlet />
+      <Outlet  />
     <Footer/>
     </div>
   );

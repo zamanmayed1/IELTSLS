@@ -13,28 +13,46 @@ const Navbar = () => {
 
   return (
     <div className="bg-white border-b shadow-sm">
-      <div className="container mx-auto px-4 flex justify-between items-center py-3">
+      <div className=" mx-auto px-4 flex justify-between items-center py-3">
         <div className="flex items-center">
           <img className="w-36" src="/mainlogo.png" alt="Logo" />
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className={`text-gray-700 hover:text-gray-900 ${isActive('/') ? 'border-b-2 border-blue-600' : ''}`}>
+          <Link
+            to="/"
+            className={`text-gray-700 hover:text-gray-900 ${
+              isActive("/") ? "border-b-2 border-blue-600" : ""
+            }`}
+          >
             Home
           </Link>
-          <Link to="/library" className={`text-gray-700 hover:text-gray-900 ${isActive('/library') ? 'border-b-2 border-blue-600' : ''}`}>
+          <Link
+            to="/library"
+            className={`text-gray-700 hover:text-gray-900 ${
+              isActive("/library") ? "border-b-2 border-blue-600" : ""
+            }`}
+          >
             Library
           </Link>
-          <Link to="/vocabvault" className={`text-gray-700 hover:text-gray-900 ${isActive('/vocabvault') ? 'border-b-2 border-blue-600' : ''}`}>
+          <Link
+            to="/vocabvault"
+            className={`text-gray-700 hover:text-gray-900 ${
+              isActive("/vocabvault") ? "border-b-2 border-blue-600" : ""
+            }`}
+          >
             Vocab Vault
           </Link>
- 
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <div className="relative">
-            <Link onClick={toggleDrawer} to={'/dashboard'} className="focus:outline-none">
+            <Link
+              onClick={toggleDrawer}
+              to={"/dashboard"}
+              className="focus:outline-none"
+            >
               <img
-                className="w-10 h-10 rounded-full"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                className="w-10 h-10 p-1 rounded-full border"
+                src="/src/assets/avatar.png"
                 alt="User Avatar"
               />
             </Link>
@@ -68,12 +86,16 @@ const Navbar = () => {
         <div className="md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
           <div className="fixed inset-y-0 right-0 w-64 bg-white p-4 shadow-lg z-50">
             <div className="flex justify-between items-center">
-              <Link onClick={toggleDrawer} to={'/dashboard'} className="focus:outline-none ml-4">
+              <Link
+                onClick={toggleDrawer}
+                to={"/dashboard"}
+                className="focus:outline-none ml-4"
+              >
                 <img
-                  className="w-10 h-10 rounded-full"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                  alt="User Avatar"
-                />
+                className="w-10 h-10 p-1 rounded-full border"
+                src="/src/assets/avatar.png"
+                alt="User Avatar"
+              />
               </Link>
               <button
                 className="text-gray-700 focus:outline-none"
@@ -117,7 +139,6 @@ const Navbar = () => {
               >
                 Vocab Vault
               </Link>
-            
             </nav>
           </div>
         </div>
