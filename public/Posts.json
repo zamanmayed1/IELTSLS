@@ -1,0 +1,227 @@
+[
+  {
+    "id": "1",
+    "username": "Alice Johnson",
+    "avatar": "https://i.pravatar.cc/100?img=1",
+    "content": "Today, I took a long walk in the park and was mesmerized by the vibrant colors of the flowers blooming around me. Nature has a unique way of lifting our spirits!",
+    "media": "https://picsum.photos/600/400?random=1",
+    "likes": 10,
+    "comments": []
+  },
+  {
+    "id": "2",
+    "username": "Bob Smith",
+    "avatar": "https://i.pravatar.cc/100?img=2",
+    "content": "Just finished reading a fascinating book about the secrets of productivity. It changed the way I approach my daily tasks and how I manage my time!",
+    "media": "https://picsum.photos/600/400?random=2",
+    "likes": 5,
+    "comments": []
+  },
+  {
+    "id": "3",
+    "username": "Charlie Brown",
+    "avatar": "https://i.pravatar.cc/100?img=3",
+    "content": "Had an unforgettable day at the beach. The sound of the waves crashing, the smell of the salty air, and the warmth of the sun made it a perfect escape from reality.",
+    "media": "https://picsum.photos/600/400?random=3",
+    "likes": 8,
+    "comments": []
+  },
+  {
+    "id": "4",
+    "username": "Diana Prince",
+    "avatar": "https://i.pravatar.cc/100?img=4",
+    "content": "Completed my first marathon today! The experience was exhilarating and pushed me to my limits, but crossing that finish line made it all worth it.",
+    "media": "https://picsum.photos/600/400?random=4",
+    "likes": 15,
+    "comments": []
+  },
+  {
+    "id": "5",
+    "username": "Edward Elric",
+    "avatar": "https://i.pravatar.cc/100?img=5",
+    "content": "Learning to code has been a transformative journey. Each line of code I write feels like building a new world of possibilities, and I'm loving every moment!",
+    "media": "https://picsum.photos/600/400?random=5",
+    "likes": 12,
+    "comments": []
+  },
+  {
+    "id": "6",
+    "username": "Fiona Gallagher",
+    "avatar": "https://i.pravatar.cc/100?img=6",
+    "content": "I spent the afternoon exploring new coffee shops around town. Each place has its unique vibe, and I love discovering hidden gems.",
+    "media": "https://picsum.photos/600/400?random=6",
+    "likes": 7,
+    "comments": []
+  },
+  {
+    "id": "7",
+    "username": "George Washington",
+    "avatar": "https://i.pravatar.cc/100?img=7",
+    "content": "History fascinates me! Today I dove deep into the life of a great leader whose decisions shaped the world we live in. Learning from the past is essential for our future.",
+    "media": "https://picsum.photos/600/400?random=7",
+    "likes": 9,
+    "comments": []
+  },
+  {
+    "id": "8",
+    "username": "Hannah Montana",
+    "avatar": "https://i.pravatar.cc/100?img=8",
+    "content": "I've been enjoying the art of cooking lately. Each dish I create tells a story, and it's rewarding to see others enjoy what I prepare.",
+    "media": "https://picsum.photos/600/400?random=8",
+    "likes": 11,
+    "comments": []
+  },
+  {
+    "id": "9",
+    "username": "Ian Malcolm",
+    "avatar": "https://i.pravatar.cc/100?img=9",
+    "content": "The impact of cinema is immense. I recently watched a classic film that made me reflect on the world and our choices. Art truly has the power to provoke thought.",
+    "media": "https://picsum.photos/600/400?random=9",
+    "likes": 14,
+    "comments": []
+  },
+  {
+    "id": "10",
+    "username": "Jane Austen",
+    "avatar": "https://i.pravatar.cc/100?img=10",
+    "content": "I’m currently writing my next novel and feeling inspired! Crafting characters and weaving their stories together is a magical process.",
+    "media": "https://picsum.photos/600/400?random=10",
+    "likes": 6,
+    "comments": []
+  },
+  {
+    "id": "11",
+    "username": "Katherine Johnson",
+    "avatar": "https://i.pravatar.cc/100?img=11",
+    "content": "Being a part of STEM has opened countless doors for me. Today, I engaged in a project that could potentially change lives and inspire others.",
+    "media": "https://picsum.photos/600/400?random=11",
+    "likes": 20,
+    "comments": []
+  },
+  {
+    "id": "12",
+    "username": "Leonardo DiCaprio",
+    "avatar": "https://i.pravatar.cc/100?img=12",
+    "content": "The urgency of climate change cannot be overstated. I dedicated today to raising awareness and pushing for action to preserve our planet for future generations.",
+    "media": "https://picsum.photos/600/400?random=12",
+    "likes": 30,
+    "comments": []
+  },
+  {
+    "id": "13",
+    "username": "Mona Lisa",
+    "avatar": "https://i.pravatar.cc/100?img=13",
+    "content": "Art is a reflection of our deepest emotions. Today, I visited an exhibit that touched my heart and inspired me to create.",
+    "media": "https://picsum.photos/600/400?random=13",
+    "likes": 18,
+    "comments": []
+  },
+  {
+    "id": "14",
+    "username": "Nathan Drake",
+    "avatar": "https://i.pravatar.cc/100?img=14",
+    "content": "Adventure is out there! I’ve embarked on a journey to uncover hidden treasures and learn from the rich history surrounding them.",
+    "media": "https://picsum.photos/600/400?random=14",
+    "likes": 16,
+    "comments": []
+  },
+  {
+    "id": "15",
+    "username": "Olivia Wilde",
+    "avatar": "https://i.pravatar.cc/100?img=15",
+    "content": "Film is not just entertainment; it's a lens through which we view society. Today, I reflected on the messages movies send and their impact on culture.",
+    "media": "https://picsum.photos/600/400?random=15",
+    "likes": 21,
+    "comments": []
+  },
+  {
+    "id": "16",
+    "username": "Paul Atreides",
+    "avatar": "https://i.pravatar.cc/100?img=16",
+    "content": "Life is full of challenges, but they often lead to the most rewarding experiences. Today was a reminder of the importance of perseverance.",
+    "media": "https://picsum.photos/600/400?random=16",
+    "likes": 9,
+    "comments": []
+  },
+  {
+    "id": "17",
+    "username": "Quinn Fabray",
+    "avatar": "https://i.pravatar.cc/100?img=17",
+    "content": "Music has an extraordinary ability to heal and connect people. I spent the day writing lyrics that express my journey and struggles.",
+    "media": "https://picsum.photos/600/400?random=17",
+    "likes": 12,
+    "comments": []
+  },
+  {
+    "id": "18",
+    "username": "Ron Weasley",
+    "avatar": "https://i.pravatar.cc/100?img=18",
+    "content": "Today, I reminisced about my time in the wizarding world and how it shaped my friendships and adventures. Magic truly knows no bounds.",
+    "media": "https://picsum.photos/600/400?random=18",
+    "likes": 15,
+    "comments": []
+  },
+  {
+    "id": "19",
+    "username": "Steve Rogers",
+    "avatar": "https://i.pravatar.cc/100?img=19",
+    "content": "Every day is a new opportunity to make a difference. I dedicated my efforts today to helping others and standing up for what’s right.",
+    "media": "https://picsum.photos/600/400?random=19",
+    "likes": 25,
+    "comments": []
+  },
+  {
+    "id": "20",
+    "username": "Tina Fey",
+    "avatar": "https://i.pravatar.cc/100?img=20",
+    "content": "Comedy brings joy and laughter into our lives. I spent the day crafting jokes and reflecting on the importance of humor.",
+    "media": "https://picsum.photos/600/400?random=20",
+    "likes": 27,
+    "comments": []
+  },
+  {
+    "id": "21",
+    "username": "Uma Thurman",
+    "avatar": "https://i.pravatar.cc/100?img=21",
+    "content": "I had an enlightening conversation today about the evolution of film and how it mirrors societal changes. It’s fascinating to witness these shifts.",
+    "media": "https://picsum.photos/600/400?random=21",
+    "likes": 22,
+    "comments": []
+  },
+  {
+    "id": "22",
+    "username": "Victor Frankenstein",
+    "avatar": "https://i.pravatar.cc/100?img=22",
+    "content": "The pursuit of knowledge can lead to unexpected outcomes. I reflected on my experiments today and the lessons they taught me.",
+    "media": "https://picsum.photos/600/400?random=22",
+    "likes": 17,
+    "comments": []
+  },
+  {
+    "id": "23",
+    "username": "Wendy Darling",
+    "avatar": "https://i.pravatar.cc/100?img=23",
+    "content": "Adventure awaits in every story! I spent the day dreaming about the endless possibilities that lie ahead.",
+    "media": "https://picsum.photos/600/400?random=23",
+    "likes": 14,
+    "comments": []
+  },
+  {
+    "id": "24",
+    "username": "Xander Harris",
+    "avatar": "https://i.pravatar.cc/100?img=24",
+    "content": "Friendship is the essence of life. Today, I reached out to old friends and celebrated our shared memories.",
+    "media": "https://picsum.photos/600/400?random=24",
+    "likes": 19,
+    "comments": []
+  },
+  {
+    "id": "25",
+    "username": "Yoda",
+    "avatar": "https://i.pravatar.cc/100?img=25",
+    "content": "Do, or do not. There is no try. This wisdom continues to guide my actions and decisions every day.",
+    "media": "https://picsum.photos/600/400?random=25",
+    "likes": 35,
+    "comments": []
+  }
+]
