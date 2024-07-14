@@ -52,7 +52,7 @@ const Navbar = () => {
             >
               <img
                 className="w-10 h-10 p-1 rounded-full border"
-                src="/src/assets/avatar.png"
+                src="https://i.ibb.co/kmsbNMP/unnamed.jpg"
                 alt="User Avatar"
               />
             </Link>
@@ -93,7 +93,7 @@ const Navbar = () => {
               >
                 <img
                 className="w-10 h-10 p-1 rounded-full border"
-                src="/src/assets/avatar.png"
+                src="https://i.ibb.co/kmsbNMP/unnamed.jpg"
                 alt="User Avatar"
               />
               </Link>

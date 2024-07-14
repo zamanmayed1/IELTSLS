@@ -11,6 +11,9 @@ import Library from "./pages/Library.jsx";
 import VocabVault from "./pages/VocabVault.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Profile from "./pages/dashboard/Profile.jsx";
+import Feed from "./pages/dashboard/Feed.jsx";
+import Settings from "./pages/dashboard/Settings.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,24 +26,38 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard />,
+        children: [
+          {
+            index: true,
+            element: <Profile />,
+          },
+          {
+            path: "feed",
+            element: <Feed />,
+          },
+          {
+            path: "settings",
+            element: <Settings />,
+          },
+        ]
       },
       {
-        path: "/library",
+        path: "library",
         element: <Library />,
       },
       {
-        path: "/vocabvault",
-        element: <VocabVault/>,
+        path: "vocabvault",
+        element: <VocabVault />,
       },
       {
-        path: "/login",
-        element: <Login/>,
+        path: "login",
+        element: <Login />,
       },
       {
-        path: "/register",
-        element: <Register/>,
+        path: "register",
+        element: <Register />,
       },
     ],
   },
