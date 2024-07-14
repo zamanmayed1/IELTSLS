@@ -98,7 +98,7 @@ const VocabVault = () => {
                 {topic.words.map((word, wordIndex) => (
                   <li
                     key={wordIndex}
-                    className={`text-gray-700 list-none px-3 py-2 border m-1 capitalize cursor-pointer ${
+                    className={`text-gray-700 list-none px-3 py-2 border m-1 min-w-max hover:bg-red-50 capitalize cursor-pointer ${
                       pronouncingWord === word ? "bg-blue-600 text-white" : ""
                     }`}
                     onClick={() => pronounceWord(word)}
