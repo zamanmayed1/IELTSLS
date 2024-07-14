@@ -13,7 +13,6 @@ const VocabVault = () => {
         const response = await axios.get("/VocabVault.json");
         const data = response.data;
 
-        // Check if data is an array before setting it to topics
         if (Array.isArray(data)) {
           setTopics(data);
         } else {
@@ -49,14 +48,14 @@ const VocabVault = () => {
     const utterance = new SpeechSynthesisUtterance(word);
     speechSynthesis.speak(utterance);
     setPronouncingWord(word);
-    playSoundEffect(); // Play sound effect
+    playSoundEffect();
     setTimeout(() => {
       setPronouncingWord(null);
-    }, 2000); // Adjust as needed
+    }, 2000);
   };
 
   const playSoundEffect = () => {
-    const audio = new Audio("/click-sound.mp3"); // Path to your sound effect
+    const audio = new Audio("/click-sound.mp3");
     audio.play();
   };
 
@@ -67,11 +66,11 @@ const VocabVault = () => {
   }
 
   return (
-    <div className=" mx-auto py-6 px-2 lg:px-8 ">
+    <div className="mx-auto py-6 px-4 lg:px-8">
       <Helmet>
         <title>Vocab Vault - Unlock Your Word Power!</title>
       </Helmet>
-      <div className="mb-4 ">
+      <div className="mb-4">
         <div className="relative w-full h-2 bg-gray-200 rounded">
           <div
             className="absolute h-full bg-blue-600 rounded"
@@ -95,21 +94,19 @@ const VocabVault = () => {
               {topic.topic}
             </h2>
             {index <= expandedIndex && (
-              <>
-                <ul className="list-disc list-inside mb-2 flex flex-wrap">
-                  {topic.words.map((word, wordIndex) => (
-                    <li
-                      key={wordIndex}
-                      className={`text-gray-700 list-none px-3 py-2 border m-1 capitalize cursor-pointer ${
-                        pronouncingWord === word ? "bg-blue-600 text-white" : ""
-                      }`}
-                      onClick={() => pronounceWord(word)}
-                    >
-                      {word}
-                    </li>
-                  ))}
-                </ul>
-              </>
+              <ul className="list-disc list-inside mb-2 flex flex-wrap">
+                {topic.words.map((word, wordIndex) => (
+                  <li
+                    key={wordIndex}
+                    className={`text-gray-700 list-none px-3 py-2 border m-1 capitalize cursor-pointer ${
+                      pronouncingWord === word ? "bg-blue-600 text-white" : ""
+                    }`}
+                    onClick={() => pronounceWord(word)}
+                  >
+                    {word}
+                  </li>
+                ))}
+              </ul>
             )}
             {index > expandedIndex && (
               <button
