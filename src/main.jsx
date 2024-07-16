@@ -14,6 +14,8 @@ import Register from "./pages/Register.jsx";
 import Profile from "./pages/dashboard/Profile.jsx";
 import Feed from "./pages/dashboard/Feed.jsx";
 import Settings from "./pages/dashboard/Settings.jsx";
+import { Provider } from "react-redux";
+import store from "./redux-toolkit/store.js";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
             path: "settings",
             element: <Settings />,
           },
-        ]
+        ],
       },
       {
         path: "library",
@@ -65,11 +67,13 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <Helmet>
-        <title>IELTS LS - Score High</title>
-      </Helmet>
-      <RouterProvider router={router} />
-    </HelmetProvider>
+    <Provider store={store}>
+      <HelmetProvider>
+        <Helmet>
+          <title>IELTS LS - Score High</title>
+        </Helmet>
+        <RouterProvider router={router} />
+      </HelmetProvider>
+    </Provider>
   </React.StrictMode>
 );

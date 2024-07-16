@@ -1,31 +1,25 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import { Helmet } from "react-helmet-async";
 
+import { fetchVocabs } from "../redux-toolkit/vocabvault.slice";
+
 const VocabVault = () => {
-  const [topics, setTopics] = useState([]);
+  const dispatch = useDispatch();
+  const vocabs = useSelector((state) => state.vocabvault.vocabs);
+  const vocabStatus = useSelector((state) => state.vocabvault.status);
+  const error = useSelector((state) => state.vocabvault.error);
+
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [pronouncingWord, setPronouncingWord] = useState(null);
+  const [points, setPoints] = useState(0);
 
   useEffect(() => {
-    const fetchTopics = async () => {
-      try {
-        const response = await axios.get("/VocabVault.json");
-        const data = response.data;
-
-        if (Array.isArray(data)) {
-          setTopics(data);
-        } else {
-          console.error("Fetched data is not an array:", data);
-        }
-      } catch (error) {
-        console.error("Error fetching topics:", error);
-      }
-    };
-
-    fetchTopics();
+    if (vocabStatus === "idle") {
+      dispatch(fetchVocabs());
+    }
     loadProgress();
-  }, []);
+  }, [vocabStatus, dispatch]);
 
   const loadProgress = () => {
     const savedIndex = localStorage.getItem("vocabVaultProgress");
@@ -34,34 +28,34 @@ const VocabVault = () => {
     }
   };
 
-  const handleUnlockTopic = (index) => {
-    setExpandedIndex(index);
-    localStorage.setItem("vocabVaultProgress", index);
-  };
-
-  const handleResetTopics = () => {
-    setExpandedIndex(null);
-    localStorage.removeItem("vocabVaultProgress");
-  };
-
   const pronounceWord = (word) => {
     const utterance = new SpeechSynthesisUtterance(word);
     speechSynthesis.speak(utterance);
     setPronouncingWord(word);
-    playSoundEffect();
+    setPoints((prev) => prev + 1);
     setTimeout(() => {
       setPronouncingWord(null);
     }, 2000);
   };
 
-  const playSoundEffect = () => {
-    const audio = new Audio("/click-sound.mp3");
-    audio.play();
+  const handleUnlockTopic = (index) => {
+    if (expandedIndex === index - 1) {
+      setExpandedIndex(index);
+      localStorage.setItem("vocabVaultProgress", index);
+    }
   };
 
-  if (topics.length === 0) {
+  if (vocabStatus === "loading") {
     return (
       <div className="flex justify-center items-center py-20">Loading...</div>
+    );
+  }
+
+  if (vocabStatus === "failed") {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <p>Error: {error}</p>
+      </div>
     );
   }
 
@@ -70,25 +64,30 @@ const VocabVault = () => {
       <Helmet>
         <title>Vocab Vault - Unlock Your Word Power!</title>
       </Helmet>
-      <div className="mb-4">
-        <div className="relative w-full h-2 bg-gray-200 rounded">
-          <div
-            className="absolute h-full bg-blue-600 rounded"
-            style={{ width: `${((expandedIndex + 1) / topics.length) * 100}%` }}
-          ></div>
-        </div>
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-bold">Points: {points}</h2>
+      </div>
+      <div className="relative w-full h-2 bg-gray-200 rounded mb-4">
+        <div
+          className="absolute h-full bg-blue-600 rounded transition-all duration-500"
+          style={{ width: `${((expandedIndex + 1) / vocabs.length) * 100}%` }}
+        ></div>
       </div>
 
       <div>
-        {topics.map((topic, index) => (
+        {vocabs.map((topic, index) => (
           <div
             key={topic.id}
-            className={`bg-white rounded-lg p-4 transition-transform transform my-2 border ${
+            className={`rounded-lg p-4 transition-transform transform my-4 border  ${
               index <= expandedIndex ? "opacity-100" : "opacity-50"
             }`}
+            style={{
+              transform: index <= expandedIndex ? "scale(1)" : "scale(0.95)",
+              transition: "transform 0.2s",
+            }}
           >
             <h2
-              className="text-2xl font-semibold mb-2 cursor-pointer"
+              className="text-2xl font-semibold mb-2 cursor-pointer hover:text-blue-600 transition-colors duration-300"
               onClick={() => handleUnlockTopic(index)}
             >
               {topic.topic}
@@ -98,7 +97,7 @@ const VocabVault = () => {
                 {topic.words.map((word, wordIndex) => (
                   <li
                     key={wordIndex}
-                    className={`text-gray-700 list-none px-3 py-2 border m-1 min-w-max hover:bg-red-50 capitalize cursor-pointer ${
+                    className={`text-gray-700 list-none px-3 py-2 border m-1 min-w-max capitalize cursor-pointer transition-transform duration-200 ${
                       pronouncingWord === word ? "bg-blue-600 text-white" : ""
                     }`}
                     onClick={() => pronounceWord(word)}
@@ -120,10 +119,13 @@ const VocabVault = () => {
         ))}
       </div>
 
-      {expandedIndex === topics.length - 1 && (
+      {expandedIndex === vocabs.length - 1 && (
         <div className="text-center mt-6">
           <button
-            onClick={handleResetTopics}
+            onClick={() => {
+              setExpandedIndex(null);
+              localStorage.removeItem("vocabVaultProgress");
+            }}
             className="bg-red-600 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-red-700 transition duration-300"
           >
             Lock All Topics Again

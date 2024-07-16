@@ -52,7 +52,7 @@ const Navbar = () => {
             >
               <img
                 className="w-10 h-10 p-1 rounded-full border"
-                src="https://i.ibb.co/kmsbNMP/unnamed.jpg"
+                src="https://i.ibb.co/whHfRs9/Fotolia-106071621-Subscription-Yearly-XXL-PLUS-square.jpg"
                 alt="User Avatar"
               />
             </Link>
@@ -92,10 +92,10 @@ const Navbar = () => {
                 className="focus:outline-none ml-4"
               >
                 <img
-                className="w-10 h-10 p-1 rounded-full border"
-                src="https://i.ibb.co/kmsbNMP/unnamed.jpg"
-                alt="User Avatar"
-              />
+                  className="w-10 h-10 p-1 rounded-full border"
+                  src="https://i.ibb.co/whHfRs9/Fotolia-106071621-Subscription-Yearly-XXL-PLUS-square.jpg"
+                  alt="User Avatar"
+                />
               </Link>
               <button
                 className="text-gray-700 focus:outline-none"
