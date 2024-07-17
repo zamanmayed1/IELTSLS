@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {},
   },
+  daisyui: {
+    themes: ["lofi"], // Set DaisyUI to use only the light theme
+  },
   plugins: [
     require('daisyui')
   ],
 };
-

@@ -47,13 +47,13 @@ const Home = () => {
       </header>
 
       {/* Features */}
-      <section className="bg-white py-10 px-2 lg:px-8  mx-auto">
+      <section className="bg-white py-10 px-2 lg:px-4  mx-auto">
         <div className=" mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {homodata.map((feature) => (
               <div
                 key={feature.id}
-                className="bg-white rounded-lg border p-6 transition-transform duration-300 hover:scale-105 flex flex-col items-center relative"
+                className="bg-white rounded-lg border p-4 transition-transform duration-300 hover:scale-105 flex flex-col items-center relative"
               >
                 {renderIcon(feature.iconName)}
                 <h3 className="text-xl font-semibold mb-4 text-center">
