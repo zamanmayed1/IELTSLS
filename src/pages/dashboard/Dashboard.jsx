@@ -23,7 +23,7 @@ const Dashboard = () => {
           <img
             src={fakeUserData.profileImage}
             alt="Profile"
-            className="max-w-[150px] block mx-auto max-h-[150px] rounded-full border-4 border-white shadow-lg"
+            className="max-w-[120px] block mx-auto max-h-[120px] rounded-full border-4 border-white shadow-lg"
           />
           <h1 className="text-xl md:text-2xl font-bold text-center">
             {fakeUserData.name}
