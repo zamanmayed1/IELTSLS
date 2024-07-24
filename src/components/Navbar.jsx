@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const profiledata = useSelector(e => e.profiledata.mydata)
   const location = useLocation(); // Get the current location
 
   const toggleDrawer = () => {
@@ -11,13 +13,17 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+
   return (
-    <div className="bg-white border-b shadow-sm">
+    <div className="bg-white border-b shadow-sm sticky top-0 z-50 bold">
       <div className=" mx-auto px-4 flex justify-between items-center py-3">
-        <div className="flex items-center">
-          <img className="w-36" src="/mainlogo.png" alt="Logo" />
+        <div className="flex items-center ">
+          <Link
+            to="/">
+          <img className="w-36" src="/mainlogo.png" alt="IELTS LS" />
+          </Link>
         </div>
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
             className={`text-gray-700 hover:text-gray-900 ${
@@ -42,6 +48,22 @@ const Navbar = () => {
           >
             Vocab Vault
           </Link>
+          <Link
+            to="/courses"
+            className={`text-gray-700 hover:text-gray-900 ${
+              isActive("/courses") ? "border-b-2 border-blue-600" : ""
+            }`}
+          >
+            Courses
+          </Link>
+          <Link
+            to="/private-batch"
+            className={`text-gray-700 hover:text-gray-900 ${
+              isActive("/private-batch") ? "border-b-2 border-blue-600" : ""
+            }`}
+          >
+            Batch's
+          </Link>
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <div className="relative">
@@ -52,8 +74,9 @@ const Navbar = () => {
             >
               <img
                 className="w-10 h-10 p-1 rounded-full border"
-                src="https://i.ibb.co/whHfRs9/Fotolia-106071621-Subscription-Yearly-XXL-PLUS-square.jpg"
-                alt="User Avatar"
+                src={profiledata.profilePhoto}
+                alt={profiledata.name}
+                title={profiledata.name}
               />
             </Link>
           </div>
@@ -138,6 +161,20 @@ const Navbar = () => {
                 onClick={toggleDrawer}
               >
                 Vocab Vault
+              </Link>
+              <Link
+                to="/courses"
+                className="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+                onClick={toggleDrawer}
+              >
+                Courses
+              </Link>
+              <Link
+                to="/private-batch"
+                className="block py-2 px-4 text-gray-700 hover:bg-gray-100 rounded-md"
+                onClick={toggleDrawer}
+              >
+               Private Batch
               </Link>
             </nav>
           </div>

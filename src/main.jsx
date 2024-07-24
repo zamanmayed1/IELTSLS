@@ -16,6 +16,9 @@ import Feed from "./pages/dashboard/Feed.jsx";
 import Settings from "./pages/dashboard/Settings.jsx";
 import { Provider } from "react-redux";
 import store from "./redux-toolkit/store.js";
+import PrivateBatch from "./pages/PrivateBatch.jsx";
+import CareerCounsiling from "./pages/CareerCounsiling.jsx";
+import Courses from "./pages/Courses.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +55,18 @@ const router = createBrowserRouter([
       {
         path: "vocabvault",
         element: <VocabVault />,
+      },
+      {
+        path: "courses",
+        element: <Courses />,
+      },
+      {
+        path: "private-batch",
+        element: <PrivateBatch />,
+      },
+      {
+        path: "career-counsiling",
+        element: <CareerCounsiling />,
       },
       {
         path: "login",

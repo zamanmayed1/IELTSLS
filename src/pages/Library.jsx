@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
-import { FaSearch, FaUser, FaBuilding, FaDollarSign, FaBarcode, FaStar, FaClock } from 'react-icons/fa';
+import {
+  FaSearch,
+  FaUser,
+  FaBuilding,
+  FaDollarSign,
+  FaBarcode,
+  FaStar,
+  FaClock,
+} from "react-icons/fa";
 
 const Library = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,14 +39,14 @@ const Library = () => {
             <FaSearch className="absolute left-3 top-3 text-gray-400" />
           </div>
         </div>
-        <div className="cursor-pointer grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="cursor-pointer grid grid-cols-1  md:grid-cols-2  gap-6">
           {filteredBooks.map((book) => (
             <div
               key={book.id}
-              className="border rounded-md p-2 relative transition-shadow max-h-min flex gap-4 items-center bg-white hover:shadow-md"
+              className="border p-2 relative  max-h-min md:flex gap-4 items-center bg-white hover:shadow-md transition-shadow"
             >
               <img
-                className="border p-1 left-0 my-auto min-w-[120px] min-h-[170px] max-w-[120px] max-h-[170px]"
+                className="border p-1 left-0 my-auto  md:min-w-[120px] min-h-[170px] md:max-w-[120px] max-h-[170px]"
                 src={book.coverPicture}
                 alt={book.title}
               />
@@ -59,11 +67,18 @@ const Library = () => {
                 </div>
                 <div className="flex items-center mb-1">
                   <FaBarcode className="mr-2 text-gray-600" />
-                  <h1 className="text-sm" title="The International Standard Book Number">ISBN: {book.isbn}</h1>
+                  <h1
+                    className="text-sm"
+                    title="The International Standard Book Number"
+                  >
+                    ISBN: {book.isbn}
+                  </h1>
                 </div>
                 <div className="flex items-center mb-1">
                   <FaStar className="mr-2 text-gray-600" />
-                  <h1 className="text-sm" title="Ratings">Ratings: {book.reviews}</h1>
+                  <h1 className="text-sm" title="Ratings">
+                    Ratings: {book.reviews}
+                  </h1>
                 </div>
                 <div className="flex items-center mb-1">
                   <FaClock className="mr-2 text-gray-600" />

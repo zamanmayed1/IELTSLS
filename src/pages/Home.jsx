@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const homodata = useSelector((s) => s.homodata.datas);
-
   const renderIcon = (iconName) => {
     switch (iconName) {
       case "FaTachometerAlt":
@@ -47,26 +46,37 @@ const Home = () => {
       </header>
 
       {/* Features */}
-      <section className="bg-white py-10 px-2 lg:px-4  mx-auto">
+      <section className="bg-white py-10 px-2 lg:px-4  mx-auto w-full">
         <div className=" mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
             {homodata.map((feature) => (
               <div
                 key={feature.id}
-                className="bg-white rounded-lg border p-4 transition-transform duration-300 hover:scale-105 flex flex-col items-center relative"
+                className="bg-white  hover:shadow-md transition-shadow overflow-hidden  border flex flex-col  relative"
               >
-                {renderIcon(feature.iconName)}
-                <h3 className="text-xl font-semibold mb-4 text-center">
-                  {feature.title}
-                </h3>
+                <div className=" border-b w-full h-[100px] flex">
+                  {/* icon */}
+                  <div className="border-r w-[25%] flex justify-center items-center">
+                    {renderIcon(feature.iconName)}
+                  </div>
+                  {/* title */}
+                  <div className="w-[75%] flex justify-center items-center">
+                    <h3 className="text-xl font-semibold mb-4 ">
+                      {feature.title}
+                    </h3>
+                  </div>
+                </div>
+
                 {feature.isComingSoon && (
-                  <span className="absolute top-2 right-2 bg-[#2563eb] text-white text-xs px-2 py-1 rounded-full">
+                  <span className="absolute z-10 top-2 right-2 bg-[#2563eb] text-white text-xs px-2 py-1 rounded-full">
                     Coming Soon
                   </span>
                 )}
-                <ul className="list-disc list-inside text-gray-700 text-left">
+                <ul className="p-4  text-gray-700 text-left">
                   {feature.description.map((desc, index) => (
-                    <li className="list-none border-b py-1 my-1" key={index}>{desc}</li>
+                    <li className="list-decimal ml-2  py-1 " key={index}>
+                      {desc}
+                    </li>
                   ))}
                 </ul>
               </div>

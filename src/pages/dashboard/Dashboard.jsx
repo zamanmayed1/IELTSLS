@@ -1,14 +1,11 @@
+import { useSelector } from "react-redux";
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-const fakeUserData = {
-  name: "User Name",
-  email: "usermail121548@gmail.com",
-  profileImage:
-    "https://i.ibb.co/whHfRs9/Fotolia-106071621-Subscription-Yearly-XXL-PLUS-square.jpg",
-};
 
 const Dashboard = () => {
   const location = useLocation();
+  const profiledata = useSelector(s => s?.profiledata?.mydata)
+  // console.log(profiledata);
 
   return (
     <div className="min-h-screen bg-gray-100 overflow-hidden">
@@ -21,14 +18,14 @@ const Dashboard = () => {
       >
         <div className="bg-glass shadow-sm py-2 px-2 md:px-4">
           <img
-            src={fakeUserData.profileImage}
+            src={profiledata.profilePhoto}
             alt="Profile"
             className="max-w-[120px] block mx-auto max-h-[120px] rounded-full border-4 border-white shadow-lg"
           />
           <h1 className="text-xl md:text-2xl font-bold text-center">
-            {fakeUserData.name}
+            {profiledata.name}
           </h1>
-          <p className="text-gray-600 text-center">{fakeUserData.email}</p>
+          <p className="text-gray-600 text-center">{profiledata.email}</p>
         </div>
       </div>
       {/* Dashboard Navbar */}

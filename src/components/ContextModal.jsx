@@ -10,11 +10,11 @@ const ContextModal = ({ onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-50"
       onClick={onClose}
     >
       <div
-        className="bg-white p-6 rounded shadow-md"
+        className="bg-white p-6 rounded shadow-md "
         onClick={(e) => e.stopPropagation()} // Prevent click from closing the modal
       >
         <div className="mt-4 grid grid-cols-3 justify-around gap-4">

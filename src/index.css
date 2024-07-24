@@ -46,3 +46,8 @@ backdrop-filter: blur(5px);
   .hidden-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
   }
+
+  .bold{
+    font-weight: bold !important;
+    
+  }

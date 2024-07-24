@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Settings = () => {
   const [themeColor, setThemeColor] = useState("#ffffff");
@@ -8,6 +9,7 @@ const Settings = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [notifications, setNotifications] = useState(false);
+  const profiledata = useSelector(s => s?.profiledata?.mydata)
 
   const handleThemeChange = (e) => {
     setThemeColor(e.target.value);
@@ -68,6 +70,7 @@ const Settings = () => {
         <input 
           type="text" 
           value={displayName} 
+          defaultValue={profiledata.name}
           onChange={(e) => setDisplayName(e.target.value)} 
           className="border border-gray-300 rounded-lg p-2 w-full"
           placeholder="Enter your display name"
@@ -79,6 +82,7 @@ const Settings = () => {
         <input 
           type="email" 
           value={email} 
+          defaultValue={profiledata.email}
           onChange={(e) => setEmail(e.target.value)} 
           className="border border-gray-300 rounded-lg p-2 w-full"
           placeholder="Enter your email"
