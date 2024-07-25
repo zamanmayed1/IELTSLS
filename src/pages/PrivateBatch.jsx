@@ -12,8 +12,8 @@ const PrivateBatch = () => {
           <div>
             {/* Cover */}
             <img
-              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]  border "
-              src="/public/placeholder.png"
+              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]   object-fill"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGQUytX7eS2G4qjWrU4edOgdD5hu0gTqaKw&s"
               alt=""
             />
             <div className="text-sm px-3 py-1 max-w-max   absolute  bg-green-700 text-white shadow-inner min-w-[170px]">
@@ -59,8 +59,8 @@ const PrivateBatch = () => {
           <div>
             {/* Cover */}
             <img
-              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]  border "
-              src="/public/placeholder.png"
+              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]  object-fill"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGQUytX7eS2G4qjWrU4edOgdD5hu0gTqaKw&s"
               alt=""
             />
             <div className="text-sm px-3 py-1 max-w-max   absolute  bg-green-700 text-white shadow-inner min-w-[170px]">
