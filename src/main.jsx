@@ -19,6 +19,7 @@ import store from "./redux-toolkit/store.js";
 import PrivateBatch from "./pages/PrivateBatch.jsx";
 import CareerCounsiling from "./pages/CareerCounsiling.jsx";
 import Courses from "./pages/Courses.jsx";
+import SingleCourse from "./pages/SingleCourse.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "courses",
         element: <Courses />,
+      },
+      {
+        path:"course/:courseId",
+        element:<SingleCourse/>
       },
       {
         path: "private-batch",
