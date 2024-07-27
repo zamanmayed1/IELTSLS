@@ -60,7 +60,7 @@ const SingleCourse = () => {
             <FaDollarSign className="text-blue-500 text-2xl mr-4" />
             <div>
               <h3 className="font-semibold text-gray-800">Price</h3>
-              <p className="text-gray-600">{`$${selectedCourse?.price || "N/A"}`}</p>
+              <p className="text-gray-600">{`€${selectedCourse?.price || "N/A"}`}</p>
             </div>
           </div>
           <div className="flex items-center p-4 bg-white border rounded-lg shadow-sm transition-transform transform hover:scale-105">

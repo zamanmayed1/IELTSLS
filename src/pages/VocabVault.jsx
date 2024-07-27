@@ -16,7 +16,7 @@ const VocabVault = () => {
   };
 
   return (
-    <div className="mx-auto py-6 px-4 lg:px-8">
+    <div className="mx-auto py-6 container">
       <Helmet>
         <title>Vocab Vault - Unlock Your Word Power!</title>
       </Helmet>

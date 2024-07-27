@@ -47,8 +47,8 @@ const Home = () => {
 
       {/* Features */}
       <section className="bg-white py-10 px-2 lg:px-4  mx-auto w-full">
-        <div className=" mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className=" mx-auto container">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
             {homodata.map((feature) => (
               <div
                 key={feature.id}

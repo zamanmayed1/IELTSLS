@@ -76,7 +76,7 @@ const CareerCounseling = () => {
       <Helmet>
         <title>Career Counseling - Set & Achieve Goal!</title>
       </Helmet>
-      <div className="mx-auto py-6 my-6 px-2 lg:px-8 cursor-pointer">
+      <div className="mx-auto py-6 my-6 container cursor-pointer">
         {/* Appointment Header */}
         <div className="border p-2 relative max-h-min md:flex gap-4 items-center justify-between bg-white">
           <div>

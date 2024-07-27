@@ -26,7 +26,7 @@ const Library = () => {
       <Helmet>
         <title>Library - Read More, Learn More</title>
       </Helmet>
-      <div className="mx-auto py-6 px-2 lg:px-8">
+      <div className="mx-auto container py-6 ">
         <div className="flex justify-center mb-4">
           <div className="relative w-full max-w-md">
             <input
@@ -63,7 +63,7 @@ const Library = () => {
                 </div>
                 <div className="flex items-center mb-1">
                   <FaDollarSign className="mr-2 text-gray-600" />
-                  <h1 className="text-sm">Price: ${book.price}</h1>
+                  <h1 className="text-sm">Price: €{book.price}</h1>
                 </div>
                 <div className="flex items-center mb-1">
                   <FaBarcode className="mr-2 text-gray-600" />

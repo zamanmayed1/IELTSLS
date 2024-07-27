@@ -17,7 +17,7 @@ const Courses = () => {
       <Helmet>
         <title>Courses - Learn Something Effective!</title>
       </Helmet>
-      <div className="mx-auto my-6 px-2 lg:px-8 cursor-pointer">
+      <div className="mx-auto my-6 container cursor-pointer">
         <div className="md:flex transition-opacity p-2 mt-4 max-h-min gap-8 items-start bg-white">
           <div className="md:w-1/4 border-r">
             <h2 className="text-md mb-3 text-lg">
@@ -73,14 +73,14 @@ const Courses = () => {
                   <div className="flex justify-end">
                     <Link
                       to={`/course/${c.id}`}
-                      className="text-sm px-3 py-2 w-[130px] text-center bg-[#081351] text-white shadow-inner hover:bg-green-700 duration-300"
+                      className="py-2 bg-[#081351] text-white rounded-lg hover:bg-green-700 transition-colors px-4"
                     >
                       <b>View Details</b>
                     </Link>
                   </div>
                 </div>
                 <div className="absolute shadow-inner right-0 top-0 p-2 text-2xl text-green-500">
-                  <b>{c.price === 0 ? "Free" : "$" + c.price}</b>
+                  <b>{c.price === 0 ? "Free" : "€" + c.price}</b>
                 </div>
               </div>
             ))}

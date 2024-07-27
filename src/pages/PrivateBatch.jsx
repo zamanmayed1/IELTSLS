@@ -1,105 +1,85 @@
 import { Helmet } from "react-helmet-async";
 
 const PrivateBatch = () => {
+  // Array of batch objects
+  const batches = [
+    {
+      id: 1,
+      date: "15 September 2024",
+      title: "Spoken Masterclass - Speak Fluently!",
+      price: "75",
+      batchId: "SP/BD01/53",
+      seats: 30,
+      duration: "3 Months",
+      instructors: "Alexa Hilton, Mohammed Ali",
+      schedule: "Sat, Mon, Tue, Fri",
+      image: "https://www.kapwing.com/resources/content/images/size/w1200/2021/02/how-to-put-a-picture-on-zoom-cover.png"
+    },
+    {
+      id: 2,
+      date: "01 November 2024",
+      title: "IELTS Full Course - Target Band 8.5!",
+      price: "135",
+      batchId: "SP/BD01/53",
+      seats: 30,
+      duration: "6 Months",
+      instructors: "Rimon Morol, Mohammed Ali",
+      schedule: "Sat, Mon, Tue, Fri",
+      image: "https://www.kapwing.com/resources/content/images/size/w1200/2021/02/how-to-put-a-picture-on-zoom-cover.png"
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-4 py-6">
       <Helmet>
         <title>Private Batch - Learn Something Special!</title>
       </Helmet>
-      <div className="mx-auto py-6  my-6 px-2 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6 cursor-pointer">
-        {/* Card 1 */}
-        <div className="border p-2 relative  max-h-min md:flex gap-4 items-start bg-white hover:shadow-md transition-shadow min-h-[125px] ">
-          <div>
-            {/* Cover */}
-            <img
-              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]   object-fill"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGQUytX7eS2G4qjWrU4edOgdD5hu0gTqaKw&s"
-              alt=""
-            />
-            <div className="text-sm px-3 py-1 max-w-max   absolute  bg-green-700 text-white shadow-inner min-w-[170px]">
-              <b>15 September 2024</b>
+      <div className="container mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {batches.map((batch) => (
+          <div key={batch.id} className="border p-2 relative bg-white hover:shadow-lg transition-shadow rounded-lg">
+            <div className="relative mb-4">
+              {/* Cover */}
+              <img
+                className="w-full h-48 object-cover rounded-lg"
+                src={batch.image}
+                alt={`Cover for ${batch.title}`}
+              />
+              <div className="absolute top-2 left-2 bg-green-700 text-white text-sm px-2 py-1 rounded">
+                <b>{batch.date}</b>
+              </div>
             </div>
+            {/* Content */}
+            <div>
+              <h2 className="text-xl font-semibold mb-2">
+                {batch.title}
+              </h2>
+              <div className="flex flex-wrap gap-1 mb-4">
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Price:</b> €{batch.price}
+                </div>
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Batch ID:</b> {batch.batchId}
+                </div>
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Seats:</b> {batch.seats}
+                </div>
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Duration:</b> {batch.duration}
+                </div>
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Instructors:</b> {batch.instructors}
+                </div>
+                <div className="text-sm px-3 py-1 border rounded-full ">
+                  <b>Class Schedule:</b> {batch.schedule}
+                </div>
+              </div>
+              <button className="w-full py-2 bg-[#081351] text-white rounded-lg hover:bg-green-700 transition-colors">
+                <b>Pay & Join</b>
+              </button>
+            </div>
+            {/* Content End */}
           </div>
-          {/* Content */}
-          <div>
-            <h1 className="text-lg mb-1 mt-8 md:mt-0">
-              <b>Spoken Masterclass - Speak Fluently!</b>
-            </h1>
-            <div className="flex flex-wrap -ml-2">
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Price:</b> $75
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Batch ID:</b> SP/BD01/53
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Seat:</b> 30
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Durations:</b> 3 Month's
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Instructors:</b> Alexa Hilton, Mohammed Ali
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Class Schedule:</b> Sat, Mon, Tue, Fri
-              </div>
-            </div>
-            <div
-              className={` text-sm px-3 py-2 my-2 w-full text-center bg-[#081351] text-white shadow-inner hover:bg-green-700 duration-300 max-h-max `}
-            >
-              <b>Pay & Join</b>
-            </div>
-          </div>
-          {/* Content End*/}
-        </div>
-
-        {/* Card 2 */}
-        <div className="border p-2 relative  max-h-min md:flex gap-4 items-start bg-white hover:shadow-md transition-shadow min-h-[125px] ">
-          <div>
-            {/* Cover */}
-            <img
-              className="min-w-[170px] w-full md:max-w-[170px] max-h-[220px]  min-h-[220px]  object-fill"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLGQUytX7eS2G4qjWrU4edOgdD5hu0gTqaKw&s"
-              alt=""
-            />
-            <div className="text-sm px-3 py-1 max-w-max   absolute  bg-green-700 text-white shadow-inner min-w-[170px]">
-              <b>01 November 2024</b>
-            </div>
-          </div>
-          {/* Content */}
-          <div>
-            <h1 className="text-lg mb-1 mt-8 md:mt-0">
-              <b>IELTS Full Course - Target Band 8.5!</b>
-            </h1>
-            <div className="flex flex-wrap -ml-2">
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Price:</b> $135
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Batch ID:</b> SP/BD01/53
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Seat:</b> 30
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Durations:</b> 6 Month's
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Instructors:</b> Rimon Morol, Mohammed Ali
-              </div>
-              <div className="text-sm px-3 py-1 m-1 max-w-max border rounded-full">
-                <b>Class Schedule:</b> Sat, Mon, Tue, Fri
-              </div>
-            </div>
-            <div
-              className={` text-sm px-3 py-2 my-2 w-full text-center bg-[#081351] text-white shadow-inner hover:bg-green-700 duration-300 max-h-max `}
-            >
-              <b>Pay & Join</b>
-            </div>
-          </div>
-          {/* Content End*/}
-        </div>
+        ))}
       </div>
     </div>
   );
