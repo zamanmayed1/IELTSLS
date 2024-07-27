@@ -20,6 +20,7 @@ import PrivateBatch from "./pages/PrivateBatch.jsx";
 import CareerCounsiling from "./pages/CareerCounsiling.jsx";
 import Courses from "./pages/Courses.jsx";
 import SingleCourse from "./pages/SingleCourse.jsx";
+import SearchResultPage from "./pages/SearchResultPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
       {
         path:"course/:courseId",
         element:<SingleCourse/>
+      },
+      {
+        path: "search",
+        element: <SearchResultPage />,
       },
       {
         path: "private-batch",

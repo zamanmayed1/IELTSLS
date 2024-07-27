@@ -1,60 +1,37 @@
-import { Helmet } from "react-helmet-async";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { IoIosSearch } from "react-icons/io";
-import SearchModal from "../components/SearchModal";
+import { Link, useLocation } from "react-router-dom";
 
-const Courses = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [activeCourse, setActiveCourse] = useState(0);
-  let courseCategories = useSelector((e) => e?.coursedata.courseCategories);
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+const SearchResultPage = () => {
+  const query = useQuery();
+  const searchQuery = query.get("query");
   let courses = useSelector((e) => e?.coursedata.courses);
+  let courseCategories = useSelector((e) => e?.coursedata.courseCategories);
 
-  let thisSubjectCourses = courses.filter(
-    (c) => c.category === courseCategories[activeCourse]
+  const filteredCourses = courses.filter((course) =>
+    course.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  
-
+  console.log(filteredCourses);
   return (
-    <div className="min-h-screen">
-      <Helmet>
-        <title>Courses - Learn Something Effective!</title>
-      </Helmet>
-      <div className="mx-auto my-6 container cursor-pointer">
-        <div className="md:flex transition-opacity p-2 mt-4 max-h-min gap-8 items-start bg-white">
-          <div className="md:w-1/4 border-r">
-            <div className="flex justify-between items-center">
-              <h2 className="text-md mb-3 text-lg">
-                <b>Premium Courses</b>
-              </h2>
-              <div onClick={()=>setModalOpen(!isModalOpen)} className="px-4 py-2 shadow-inner">
-                <IoIosSearch className="text-2xl block hover:text-blue-500 duration-300" />
-              </div>
-            </div>
-            <hr />
-
-            <div>
-              {courseCategories.map((v, i) => (
-                <li
-                  onClick={() => setActiveCourse(i)}
-                  className={`${
-                    v === courseCategories[activeCourse] && "bg-blue-50"
-                  } list-none text-blue-900 my-2 py-1 border-b hover:bg-blue-50 p-1 duration-300`}
-                  key={i}
-                >
-                  {v}
-                </li>
-              ))}
-            </div>
-          </div>
+    <div className="container mx-auto py-8 min-h-screen">
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold mb-4">
+          Search Results for - {searchQuery}
+        </h1>
+        <span className=" w-8 h-8 text-xl shadow-inner flex items-center justify-center font-bold bg-gray-50 rounded-full">
+          {filteredCourses?.length}
+        </span>
+      </div>
+      <hr />
+      {filteredCourses.length > 0 ? (
+        <div className="md:flex transition-opacity max-h-min gap-8 items-start ">
           <div className="md:w-3/4 flex flex-col gap-y-4">
-            {thisSubjectCourses.map((c, i) => (
+            {filteredCourses.map((c, i) => (
               <div
                 key={i}
                 className="relative mt-4 p-1 border flex flex-col items-center md:flex-row gap-4 hover:shadow-md transition-shadow"
@@ -99,11 +76,17 @@ const Courses = () => {
               </div>
             ))}
           </div>
+          <div className="md:w-1/4 mt-2">
+            {courseCategories.map((v, i) => (
+              <li className="list-none cursor-pointer text-center max-w-max inline-block px-3 py-1 border m-1 rounded-full" key={i}>{v}</li>
+            ))}
+          </div>
         </div>
-      </div>
-      {isModalOpen && <SearchModal onClose={closeModal} />}
+      ) : (
+        <p className="text-gray-600">No courses found.</p>
+      )}
     </div>
   );
 };
 
-export default Courses;
+export default SearchResultPage;
