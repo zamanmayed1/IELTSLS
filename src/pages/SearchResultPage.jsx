@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 
@@ -19,6 +20,11 @@ const SearchResultPage = () => {
   console.log(filteredCourses);
   return (
     <div className="container mx-auto py-8 min-h-screen">
+      <Helmet>
+      <title>
+          Search Results for - {searchQuery}
+        </title>
+      </Helmet>
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold mb-4">
           Search Results for - {searchQuery}
@@ -37,7 +43,7 @@ const SearchResultPage = () => {
                 className="relative mt-4 p-1 border flex flex-col items-center md:flex-row gap-4 hover:shadow-md transition-shadow"
               >
                 {/* course image */}
-                <div className="w-full md:w-1/3   max-h-[170px] object-cover">
+                <div className="w-full md:w-1/3 min-h-[170px] max-h-max">
                   <img
                     className="w-full h-full object-cover"
                     src="https://www.algonquincollege.com/lts/files/2023/07/quality-framework.png"
@@ -61,7 +67,7 @@ const SearchResultPage = () => {
                       <b>Instructors:</b> {c.instructor}
                     </div>
                   </div>
-                  <div className="flex justify-end">
+                  <div className="flex justify-end absolute bottom-1 right-1">
                     <Link
                       to={`/course/${c.id}`}
                       className="py-2 bg-[#081351] text-white rounded-lg hover:bg-green-700 transition-colors px-4"

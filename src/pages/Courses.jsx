@@ -19,8 +19,6 @@ const Courses = () => {
     setModalOpen(false);
   };
 
-  
-
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -33,7 +31,10 @@ const Courses = () => {
               <h2 className="text-md mb-3 text-lg">
                 <b>Premium Courses</b>
               </h2>
-              <div onClick={()=>setModalOpen(!isModalOpen)} className="px-4 py-2 shadow-inner">
+              <div
+                onClick={() => setModalOpen(!isModalOpen)}
+                className="px-4 py-2 shadow-inner"
+              >
                 <IoIosSearch className="text-2xl block hover:text-blue-500 duration-300" />
               </div>
             </div>
@@ -60,7 +61,7 @@ const Courses = () => {
                 className="relative mt-4 p-1 border flex flex-col items-center md:flex-row gap-4 hover:shadow-md transition-shadow"
               >
                 {/* course image */}
-                <div className="w-full md:w-1/3   max-h-[170px] object-cover">
+                <div className="w-full md:w-1/3 min-h-[170px] max-h-max">
                   <img
                     className="w-full h-full object-cover"
                     src="https://www.algonquincollege.com/lts/files/2023/07/quality-framework.png"
