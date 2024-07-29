@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className=" min-h-screen flex flex-col">
       <header className="bg-blue-600 text-white py-6">
         <div className=" mx-auto text-center">
           <h1 className="text-4xl font-bold">

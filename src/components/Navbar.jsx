@@ -16,14 +16,14 @@ const Navbar = () => {
 
   return (
     <div className="bg-white border-b shadow-sm sticky top-0 z-50 bold">
-      <div className=" mx-auto px-4 flex justify-between items-center py-3">
+      <div className=" container mx-auto px-4 flex justify-between items-center py-3">
         <div className="flex items-center ">
           <Link
             to="/">
           <img className="w-36" src="/mainlogo.png" alt="IELTS LS" />
           </Link>
         </div>
-        <div className="hidden md:flex items-center space-x-8 pr-6">
+        <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
             className={`text-gray-700 hover:text-gray-900 ${
