@@ -23,7 +23,7 @@ const Navbar = () => {
           <img className="w-36" src="/mainlogo.png" alt="IELTS LS" />
           </Link>
         </div>
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 pr-6">
           <Link
             to="/"
             className={`text-gray-700 hover:text-gray-900 ${
@@ -65,7 +65,7 @@ const Navbar = () => {
             Batch's
           </Link>
         </div>
-        <div className="hidden md:flex items-center space-x-4">
+        {/* <div className="hidden md:flex items-center space-x-4">
           <div className="relative">
             <Link
               onClick={toggleDrawer}
@@ -80,7 +80,7 @@ const Navbar = () => {
               />
             </Link>
           </div>
-        </div>
+        </div> */}
         <div className="md:hidden flex items-center">
           <button
             className="text-gray-700 focus:outline-none"
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className="md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50">
           <div className="fixed inset-y-0 right-0 w-64 bg-white p-4 shadow-lg z-50">
             <div className="flex justify-between items-center">
-              <Link
+              {/* <Link
                 onClick={toggleDrawer}
                 to={"/dashboard"}
                 className="focus:outline-none ml-4"
@@ -119,7 +119,7 @@ const Navbar = () => {
                   src="https://i.ibb.co/whHfRs9/Fotolia-106071621-Subscription-Yearly-XXL-PLUS-square.jpg"
                   alt="User Avatar"
                 />
-              </Link>
+              </Link> */}
               <button
                 className="text-gray-700 focus:outline-none"
                 onClick={toggleDrawer}

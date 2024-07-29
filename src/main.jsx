@@ -21,6 +21,7 @@ import CareerCounsiling from "./pages/CareerCounsiling.jsx";
 import Courses from "./pages/Courses.jsx";
 import SingleCourse from "./pages/SingleCourse.jsx";
 import SearchResultPage from "./pages/SearchResultPage.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "career-counsiling",
         element: <CareerCounsiling />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUs />,
       },
       {
         path: "login",

@@ -3,14 +3,15 @@ import {
   FaComments,
   FaBook,
   FaRegLightbulb,
-  FaGlobe,
-  FaClipboardList,
-  FaCommentsDollar,
+  FaBookOpen,
+  FaUsers,
+  FaBriefcase,
 } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const Home = () => {
   const homodata = useSelector((s) => s.homodata.datas);
+  
   const renderIcon = (iconName) => {
     switch (iconName) {
       case "FaTachometerAlt":
@@ -21,12 +22,12 @@ const Home = () => {
         return <FaBook className="text-blue-600 w-12 h-12 mb-4" />;
       case "FaRegLightbulb":
         return <FaRegLightbulb className="text-blue-600 w-12 h-12 mb-4" />;
-      case "FaGlobe":
-        return <FaGlobe className="text-blue-600 w-12 h-12 mb-4" />;
-      case "FaClipboardList":
-        return <FaClipboardList className="text-blue-600 w-12 h-12 mb-4" />;
-      case "FaCommentsDollar":
-        return <FaCommentsDollar className="text-blue-600 w-12 h-12 mb-4" />;
+      case "FaBookOpen":
+        return <FaBookOpen className="text-blue-600 w-12 h-12 mb-4" />;
+      case "FaUsers":
+        return <FaUsers className="text-blue-600 w-12 h-12 mb-4" />;
+      case "FaBriefcase":
+        return <FaBriefcase className="text-blue-600 w-12 h-12 mb-4" />;
       default:
         return null;
     }
@@ -46,22 +47,22 @@ const Home = () => {
       </header>
 
       {/* Features */}
-      <section className="bg-white py-10 px-2 lg:px-4  mx-auto w-full">
-        <div className=" mx-auto container">
+      <section className="bg-white py-10 px-2 lg:px-4 mx-auto w-full">
+        <div className="mx-auto container">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
             {homodata.map((feature) => (
               <div
                 key={feature.id}
-                className="bg-white  hover:shadow-md transition-shadow overflow-hidden  border flex flex-col  relative"
+                className="bg-white hover:shadow-md transition-shadow overflow-hidden border flex flex-col relative"
               >
-                <div className=" border-b w-full h-[100px] flex">
+                <div className="border-b w-full h-[100px] flex">
                   {/* icon */}
                   <div className="border-r w-[25%] flex justify-center items-center">
                     {renderIcon(feature.iconName)}
                   </div>
                   {/* title */}
                   <div className="w-[75%] flex justify-center items-center">
-                    <h3 className="text-xl font-semibold mb-4 ">
+                    <h3 className="text-xl font-semibold mb-4">
                       {feature.title}
                     </h3>
                   </div>
@@ -72,9 +73,9 @@ const Home = () => {
                     Coming Soon
                   </span>
                 )}
-                <ul className="p-4  text-gray-700 text-left">
+                <ul className="p-4 text-gray-700 text-left">
                   {feature.description.map((desc, index) => (
-                    <li className="list-decimal ml-2  py-1 " key={index}>
+                    <li className="list-decimal ml-2 py-1" key={index}>
                       {desc}
                     </li>
                   ))}

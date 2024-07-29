@@ -34,26 +34,26 @@ Welcome to the IELTS Learning System (IELTSLS) - Score High! This platform is de
 - Quizzes and games to reinforce learning
 - Word usage examples and context
 
-### 5. Translator
+### 5. Courses
 
-- Real-time text translation
-- Support for multiple languages
-- Pronunciation guide
-- Translation history
+- Comprehensive IELTS preparation courses
+- Self-paced and instructor-led options
+- Video lectures and interactive content
+- Regular assessments and feedback
 
-### 6. Mock Test System
+### 6. Private Batches
 
-- Full-length IELTS practice tests
-- Section-wise tests (Listening, Reading, Writing, Speaking)
-- Timed and untimed modes
-- Performance analytics and feedback
+- Exclusive small group sessions
+- Personalized attention and guidance
+- Flexible scheduling
+- Dedicated mentor support
 
-### 7. CHAT GPT IELTS Speaking Test System
+### 7. Career Counselling
 
-- Simulated speaking tests
-- AI-driven feedback and scoring
-- Tips and suggestions for improvement
-- Recording and playback features for self-assessment
+- Guidance on career options post-IELTS
+- One-on-one counselling sessions
+- Resume and interview preparation
+- Networking opportunities
 
 ## Additional Considerations
 
@@ -61,7 +61,7 @@ Welcome to the IELTS Learning System (IELTSLS) - Score High! This platform is de
 
 - Sign up, login, and logout functionality
 - User profile management
-- Role-based (students, admins)
+- Role-based access (students, admins)
 
 ### Analytics and Reporting
 
