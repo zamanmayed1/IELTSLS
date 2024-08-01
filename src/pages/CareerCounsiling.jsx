@@ -12,23 +12,44 @@ const CareerCounseling = () => {
   const [today, setToday] = useState(dayjs().date());
 
   const availableSlots = [
-    {
-      day: 25,
-      timeSlot: ["6:00 - 6:30", "6:30 - 7:00"],
-      paidOnly: false,
-    },
-    {
-      day: 29,
-      timeSlot: ["5:00 - 5:30", "7:30 - 8:00"],
-      paidOnly: false,
-    },
-    {
-      day: 31,
-      timeSlot: ["5:00 - 5:30", "7:30 - 8:00"],
-      paidOnly: true,
-    },
+    // Day 1 to 10
+    { day: 1, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
+    { day: 2, timeSlot: ["10:00 - 10:30", "11:00 - 11:30"], paidOnly: true },
+    { day: 3, timeSlot: ["12:00 - 12:30", "1:00 - 1:30"], paidOnly: false },
+    { day: 4, timeSlot: ["2:00 - 2:30", "3:00 - 3:30"], paidOnly: true },
+    { day: 5, timeSlot: ["4:00 - 4:30", "5:00 - 5:30"], paidOnly: false },
+    { day: 6, timeSlot: ["6:00 - 6:30", "7:00 - 7:30"], paidOnly: true },
+    { day: 7, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
+    { day: 8, timeSlot: ["10:00 - 10:30", "11:00 - 11:30"], paidOnly: true },
+    { day: 9, timeSlot: ["12:00 - 12:30", "1:00 - 1:30"], paidOnly: false },
+    { day: 10, timeSlot: ["2:00 - 2:30", "3:00 - 3:30"], paidOnly: true },
+    
+    // Day 11 to 20
+    { day: 11, timeSlot: ["4:00 - 4:30", "5:00 - 5:30"], paidOnly: false },
+    { day: 12, timeSlot: ["6:00 - 6:30", "7:00 - 7:30"], paidOnly: true },
+    { day: 13, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
+    { day: 14, timeSlot: ["10:00 - 10:30", "11:00 - 11:30"], paidOnly: true },
+    { day: 15, timeSlot: ["12:00 - 12:30", "1:00 - 1:30"], paidOnly: false },
+    { day: 16, timeSlot: ["2:00 - 2:30", "3:00 - 3:30"], paidOnly: true },
+    { day: 17, timeSlot: ["4:00 - 4:30", "5:00 - 5:30"], paidOnly: false },
+    { day: 18, timeSlot: ["6:00 - 6:30", "7:00 - 7:30"], paidOnly: true },
+    { day: 19, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
+    { day: 20, timeSlot: ["10:00 - 10:30", "11:00 - 11:30"], paidOnly: true },
+    
+    // Day 21 to 31
+    { day: 21, timeSlot: ["12:00 - 12:30", "1:00 - 1:30"], paidOnly: false },
+    { day: 22, timeSlot: ["2:00 - 2:30", "3:00 - 3:30"], paidOnly: true },
+    { day: 23, timeSlot: ["4:00 - 4:30", "5:00 - 5:30"], paidOnly: false },
+    { day: 24, timeSlot: ["6:00 - 6:30", "7:00 - 7:30"], paidOnly: true },
+    { day: 25, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
+    { day: 26, timeSlot: ["10:00 - 10:30", "11:00 - 11:30"], paidOnly: true },
+    { day: 27, timeSlot: ["12:00 - 12:30", "1:00 - 1:30"], paidOnly: false },
+    { day: 28, timeSlot: ["2:00 - 2:30", "3:00 - 3:30"], paidOnly: true },
+    { day: 29, timeSlot: ["4:00 - 4:30", "5:00 - 5:30"], paidOnly: false },
+    { day: 30, timeSlot: ["6:00 - 6:30", "7:00 - 7:30"], paidOnly: true },
+    { day: 31, timeSlot: ["8:00 - 8:30", "9:00 - 9:30"], paidOnly: false },
   ];
-
+  
   useEffect(() => {
     const date = dayjs();
     const daysInMonth = date.daysInMonth();
