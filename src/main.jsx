@@ -22,6 +22,7 @@ import Courses from "./pages/Courses.jsx";
 import SingleCourse from "./pages/SingleCourse.jsx";
 import SearchResultPage from "./pages/SearchResultPage.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import SkillDirectory from "./pages/SkillDirectory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
       {
         path: "about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "skill-directory",
+        element: <SkillDirectory />,
       },
       {
         path: "login",
