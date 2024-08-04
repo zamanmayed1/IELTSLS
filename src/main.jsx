@@ -23,6 +23,7 @@ import SingleCourse from "./pages/SingleCourse.jsx";
 import SearchResultPage from "./pages/SearchResultPage.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import SkillDirectory from "./pages/SkillDirectory.jsx";
+import SpeedRead from "./pages/SpeedRead.jsx";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "skill-directory",
         element: <SkillDirectory />,
+      },
+      {
+        path: "speed-reed",
+        element: <SpeedRead />,
       },
       {
         path: "login",

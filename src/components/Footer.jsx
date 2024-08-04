@@ -14,7 +14,6 @@ const Footer = () => {
         <Link to={"/courses"} className="link link-hover">
           Courses
         </Link>
-       
       </nav>
       <nav>
         <h6 className="footer-title">Important Links</h6>
@@ -22,11 +21,11 @@ const Footer = () => {
           About us
         </Link>
         <Link to={"/skill-directory"} className="link link-hover">
-        Skill Directory
+          Skill Directory
         </Link>
-        
-        <Link to={"/"} className="link link-hover">
-          Career
+
+        <Link to={"/speed-reed"} className="link link-hover">
+          Speed Read
         </Link>
       </nav>
       <nav>
